@@ -201,7 +201,7 @@ function homeLoad() {
     document.getElementById("homeTitle").innerHTML = "Happy Christmas!";
     document.getElementById("homeSubtitle").innerHTML = "Have a great day, site user!";
     document.getElementById("homeImage").src = "src/transparent.png";
-    document.getElementById("home").style.backgroundImage = "url('src/holiday.jpg')";
+    document.getElementById("home").style.backgroundImage = "url('src/snow.jpg')";
   }
 }
 
