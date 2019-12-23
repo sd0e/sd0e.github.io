@@ -312,8 +312,9 @@ h4 {
 }
 
 .material-icons.backButtonIcon {
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: white;
+    padding-left: 0.8vh;
 }
 
 .projectsList {
