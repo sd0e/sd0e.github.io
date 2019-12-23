@@ -24,6 +24,10 @@ main {
     background-color: #000000;
     color: white;
     text-align: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 footer {
