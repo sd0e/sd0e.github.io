@@ -3,7 +3,7 @@ function about() {
 }
 
 function projects() {
-    window.location.href = "/projects";
+    window.location.href = "/projectss/";
 }
 
 function social() {
