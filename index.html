@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sebastian Doe</title>
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-navbutton-color" content="#000000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="pageredirects.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133492093-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-133492093-4');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    </head>
+    <body class="mainPage" onload="hideBackArrow(); hideForwardArrow(); consoleAlert();">
+        <script>document.body.classList.add('fade');</script>
+        <main>
+            <img src="src/logo/logo.png" class="homeLogo">
+            <h1>Sebastian Doe</h1>
+            <p>Welcome to my personal website!</p>
+            <br><br>
+            <h4>Which page would you like to go to?</h4>
+            <br>
+            <button class="pageOptionHome info" onclick="about();">
+                <i class="material-icons home">info</i>
+                <p class="buttonDescriptionHome">About Me</p>
+            </button>
+            <button class="pageOptionHome info" onclick="projects();">
+                <i class="material-icons home">class</i>
+                <p class="buttonDescriptionHome">Projects</p>
+            </button>
+            <button class="pageOptionHome info" onclick="social();">
+                <i class="material-icons home">person</i>
+                <p class="buttonDescriptionHome">Social</p>
+            </button>
+            <button class="pageOptionHome info" onclick="blog();">
+                <i class="material-icons home">subject</i>
+                <p class="buttonDescriptionHome">Blog</p>
+            </button>
+            <button class="pageOptionHome info" onclick="contact();">
+                <i class="material-icons home">email</i>
+                <p class="buttonDescriptionHome">Contact</p>
+            </button>
+            <button class="pageOptionHome info" onclick="donate();">
+                <i class="material-icons home">favorite</i>
+                <p class="buttonDescriptionHome">Donate</p>
+            </button>
+            <br><br><br><br>
+            <h3 class="virality">Virality:</h3>
+            <p class="virality viralityText"><i class="material-icons virality">remove_red_eye</i><strong id="googleMapsViews">1,418,420</strong> Google Maps Photo Views</p>
+            <p class="virality viralityText"><i class="material-icons virality">people</i><strong id="redditKarma">25,888</strong> Reddit Karma</p>
+            <p class="virality viralityText"><i class="material-icons virality">remove_red_eye</i><strong id="500pxViews">57,492</strong> 500px Photo Views</p>
+            <div class="infoBox" id="infoBox">
+                <h3 class="infoText" id="infoText"></h3>
+            </div>
+        </main>
+    </body>
+</html>

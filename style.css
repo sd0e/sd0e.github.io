@@ -1,0 +1,730 @@
+* {
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    animation: fadeIn 1s linear;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
+    z-index: 1;
+}
+
+h4 {
+    animation: fadeIn 2s linear;
+}
+
+main {
+    margin-bottom: 100px;
+}
+
+.mainPage {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+}
+
+footer {
+    bottom: 0;
+    height: 10%;
+    position: absolute;
+    width: 100%;
+}
+
+.footerButton {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #8ca5ff;
+    color: white;
+    outline-width: 0;
+}
+
+.backArrow {
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+}
+
+.forwardArrow {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+i {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.backArrowIcon {
+    position: absolute;
+    left: 26px;
+    bottom: 23px;
+}
+
+.forwardArrowIcon {
+    position: absolute;
+    right: 22px;
+    bottom: 23px;
+}
+
+.displayHolder {
+    margin-left: 15%;
+    margin-right: 15%;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.animate-out {
+    -webkit-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 0;
+}
+
+.displayContent {
+    border: 5px solid gray;
+    border-radius: 15px;
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    max-height: calc(100vh - 300px);
+}
+
+.attribution {
+    position: absolute;
+    left: 0;
+}
+
+.attributionLink {
+    color: white;
+    text-decoration: none;
+}
+
+.imageCaption {
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .attribution {
+        position: unset;
+        display: block;
+    }
+
+    .imageCaption {
+        position: unset;
+        display: block;
+    }
+}
+
+@media (max-width: 1000px) {
+    .displayContent {
+        height: 50vw;
+    }
+}
+
+.locationImage {
+    width: 100px;
+    height: 60px;
+}
+
+button:hover {
+    -o-transition:.3s;
+    -ms-transition:.3s;
+    -moz-transition:.3s;
+    -webkit-transition:.3s;
+    transition:.3s;
+    background-color: #5e5e5e;
+}
+
+body::-webkit-scrollbar {
+    width: 2vh;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #636363;
+    border-radius: 6px;
+}
+
+.homeLogo {
+    height: 10vh;
+    padding-top: 3vh;
+}
+
+button {
+    outline-width: 0;
+}
+
+.pageOptionHome {
+    height: 10vh;
+    width: 10vw;
+    min-width: 10vh;
+    animation: fadeIn 2s linear;
+    border-radius: 1vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: left;
+    position: relative;
+}
+
+.material-icons.home {
+    font-size: 5.2vh;
+    float: left;
+    padding-left: 0.5vh;
+    position: absolute;
+    top: 1vh;
+    left: 0;
+}
+
+.buttonDescriptionHome {
+    float: left;
+    position: absolute;
+    bottom: 0;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    left: 0;
+}
+
+.pageOptionInfo {
+    height: 10vh;
+    width: 10vw;
+    min-width: 10vh;
+    border-radius: 1vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: left;
+    position: relative;
+}
+
+.material-icons.infoPage {
+    font-size: 5.2vh;
+    float: left;
+    padding-left: 0.5vh;
+    position: absolute;
+    top: 1vh;
+    left: 0;
+}
+
+.buttonDescriptionInfo {
+    float: left;
+    position: absolute;
+    bottom: 0;
+    padding-left: 1vh;
+    font-size: 1.5vh;
+    left: 0;
+}
+
+p {
+    font-size: 2vh;
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+h4 {
+    font-size: 2vh;
+}
+
+.navigationOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    animation: fadeIn 0.3s linear;
+}
+
+.navigationOverlayItems {
+    width: 100%;
+    text-align: center;
+    padding-top: 45vh;
+}
+
+.navigationExit {
+    background-color: #1b1b1b;
+    height: 5vh;
+    width: 5vh;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.material-icons.navigationExitIcon {
+    font-size: 3vh;
+    color: white;
+}
+
+.navigationButton {
+    background-color: #000000;
+    height: 5vh;
+    width: 5vh;
+    border: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.backButtonProjects {
+    background-color: #000000;
+    height: 5vh;
+    width: 5vh;
+    border: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+.material-icons.navigationButtonIcon {
+    font-size: 3vh;
+    color: white;
+}
+
+.material-icons.backButtonIcon {
+    font-size: 3vh;
+    color: white;
+}
+
+.projectsList {
+    width: 80vw;
+    display: block;
+    margin: auto;
+    text-align: left;
+}
+
+.projectButton {
+    height: 8vh;
+    width: 80vw;
+    min-width: 10vh;
+    border-radius: 1vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: left;
+    position: relative;
+    margin-bottom: 0.5vh;
+}
+
+.projectLetterSubheading {
+    font-size: 4vh;
+    padding-left: 1vw;
+}
+
+.projectButtonImage {
+    height: 6vh;
+    float: left;
+    padding-top: 0.2vh;
+    padding-left: 0.3vh;
+}
+
+.projectListTitle {
+    padding-left: 1vw;
+    float: left;
+}
+
+.projectInfoLogo1 {
+    height: 3vh;
+    padding-top: 1.5vh;
+    float: right;
+    padding-right: 2vw;
+}
+
+.projectInfoLogo2 {
+    height: 3vh;
+    padding-top: 1.5vh;
+    float: right;
+    padding-right: 0.5vw;
+}
+
+.projectInfoLogo3 {
+    height: 3vh;
+    padding-top: 1.5vh;
+    float: right;
+    padding-right: 0.5vw;
+}
+
+.projectSearch {
+    outline-width: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #353535;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    height: 3vh;
+    width: 30vh;
+    font-size: 1.5vh;
+}
+
+.Featured {
+    font-weight: bold;
+}
+
+.QandA {
+    width: calc(100% - 4vw);
+    text-align: left;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.q1 {
+    animation: fadeIn 1s linear;
+}
+
+.q2 {
+    animation: fadeIn 2s linear;
+}
+
+.q3 {
+    animation: fadeIn 3s linear;
+}
+
+.q4 {
+    animation: fadeIn 4s linear;
+}
+
+.q5 {
+    animation: fadeIn 5s linear;
+}
+
+a {
+    color: white;
+}
+
+.viralityText {
+    font-size: 1.5vh;
+}
+
+.material-icons.virality {
+    padding-right: 5px;
+}
+
+.virality {
+    animation: fadeIn 1s linear;
+}
+
+.socialMedia {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    position: relative;
+}
+
+.media {
+    border-radius: 1vh;
+    height: 6.9vh;
+    width: 100%;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    outline-width: 0;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.mediaText {
+    padding-top: 0.2vh;
+    display: inline;
+    float: left;
+}
+
+.mediaLogo {
+    padding-left: 2vh;
+    padding-right: 3vh;
+    height: 3.4vh;
+    padding-top: 1.7vh;
+    float: left;
+}
+
+.material-icons.mediaLogo {
+    padding-left: 2vh;
+    padding-right: 3vh;
+    height: 3.4vh;
+    padding-top: 1.7vh;
+    float: left;
+    font-size: 3.2vh;
+}
+
+.projectPageButton {
+    height: 8vh;
+    width: 40vw;
+    min-width: 30vh;
+    border-radius: 1000vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.projectPageButtons {
+    padding-top: 2vh;
+    width: 100%;
+}
+
+.leftButton {
+    margin-right: 2vw;
+}
+
+.moreInfo {
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.projectLogo {
+    height: 10vh;
+    display: inline;
+    padding-top: 2vh;
+}
+
+.projectInfoText {
+    min-width: 70%;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+.graphicalInfo {
+    width: 100%;
+    text-align: left;
+}
+
+.graphicalInfoDescription.top {
+    padding-top: 2vh;
+}
+
+.projectALink {
+    color: cornflowerblue;
+}
+
+.graphicalInfoDescription {
+    padding-left: 3vh;
+    font-size: 2vh;
+}
+
+.material-icons.graphicalInfoIcon {
+    font-size: 2vh;
+}
+
+.projectLogo.IP {
+    filter: invert(1);
+}
+
+.projectLogo.invert {
+    filter: invert(1);
+}
+
+.donationOptions {
+    width: 100%;
+    text-align: center;
+    padding-top: 4vh;
+}
+
+.donateImage.infoPage {
+    height: 4.8vh;
+    float: left;
+    margin-left: 1vh;
+    position: absolute;
+    top: 1vh;
+    left: 0;
+}
+
+h2 {
+    font-size: 3vh;
+}
+
+h3 {
+    font-size: 2vh;
+}
+
+.donateOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: #1b1b1b;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    animation: fadeIn 0.3s linear;
+}
+
+.donateOverlayItems {
+    width: 100%;
+    text-align: center;
+    padding-top: 45vh;
+}
+
+.donationTipButton {
+    height: 6vh;
+    width: 40vw;
+    min-width: 30vh;
+    border-radius: 1000vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.donationName {
+    margin-top: 40vh;
+}
+
+.infoBox {
+    width: 30vh;
+    height: 6vh;
+    background-color: #1b1b1b;
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    animation: fadeIn 0.4s linear;
+    border-radius: 1vh;
+    text-align: center;
+    margin-left: calc((100% - 30vh) / 2);
+    bottom: 1vh;
+}
+
+.f404button {
+    height: 6vh;
+    width: 40vw;
+    min-width: 30vh;
+    border-radius: 1000vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.blogHomePage {
+    text-align: center;
+    width: 100%;
+}
+
+.article {
+    width: 70vw;
+    min-width: 30vh;
+    border-radius: 1vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+}
+
+.articleName {
+    float: left;
+    margin-left: 0.6vw;
+    margin-bottom: 1.5vh;
+}
+
+.material-icons.articleButton {
+    font-size: 2.7vh;
+    float: right;
+    padding-top: 1.9vh;
+    margin-right: 0.6vw;
+}
+
+.createDate {
+    float: right;
+    margin-right: 0.6vw;
+}
+
+.material-icons.articleIcons {
+    font-size: 2.1vh;
+}
+
+.articleContents {
+    width: 70vw;
+    padding-left: 15vw;
+    text-align: left;
+}
+
+.codeDiv {
+    width: 70vw;
+    background-color: #353535;
+    border-radius: 1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+code {
+    font-family: monospace;
+}
+
+.articleLink {
+    color: cornflowerblue;
+}
+
+.codeConverterInput {
+    outline-width: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #353535;
+    border-radius: 1vh;
+    text-align: left;
+    padding-left: 2vw;
+    color: white;
+    height: 60vh;
+    width: 70vh;
+    font-size: 1.5vh;
+    padding-top: 1vh;
+}
+
+.convertButton {
+    height: 6vh;
+    width: 40vw;
+    min-width: 30vh;
+    border-radius: 1000vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 0.5vh;
+}
