@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sebastian Doe</title>
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-navbutton-color" content="#000000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="projects.js"></script>
+        <script src="projectredirects.js"></script>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../pageredirects.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133492093-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-133492093-4');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    </head>
+    <body class="mainPage" onload="hideBackArrow(); hideForwardArrow(); consoleAlert();">
+        <script>document.body.classList.add('fade');</script>
+        <main>
+            <button class="navigationButton" id="navigationButton" onclick="showNavigation();">
+                <i class="material-icons navigationButtonIcon">menu</i>
+            </button>
+            <h1>My projects</h1>
+            <p>Search using the textbox below.</p>
+            <br><br>
+            <input type="text" id="projectSearch" class="projectSearch" placeholder="search" onkeyup="liveUpdate();">
+            <div class="projectsList" id="projectsList">
+                <p class="projectLetterSubheading Featured" id="Featured">Featured</p>
+                <button class="projectButton" id="GameProxyFeatured" onclick="location.href = 'gameproxy.html';">
+                    <img src="assets/logos/GameProxy.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">GameProxy</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <button class="projectButton" id="WaterdFeatured" onclick="location.href = 'waterd.html';">
+                    <img src="assets/logos/Waterd.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Waterd</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <button class="projectButton" id="LargeTextDisplayerFeatured" onclick="location.href = 'largetextdisplayer.html';">
+                    <img src="assets/logos/LargeTextDisplayer.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Large Text Displayer</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <p class="projectLetterSubheading A" id="A">A</p>
+                <button class="projectButton" id="Auracoin" onclick="location.href = 'auracoin.html';">
+                    <img src="assets/logos/Auracoin.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Auracoin</p>
+                    <img src="https://cdn.pixabay.com/photo/2013/12/08/12/12/bitcoin-225079_960_720.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                </button>
+                <button class="projectButton" id="AuroraWebcount" onclick="location.href = 'webcountapp.html';">
+                    <img src="assets/logos/AuroraWebcount.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Aurora Webcount App</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                </button>
+                <p class="projectLetterSubheading C" id="C">C</p>
+                <button class="projectButton" id="CoolHomePage" onclick="location.href = 'coolhomepage.html';">
+                    <img src="assets/logos/Codepen.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Cool Home Page</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <p class="projectLetterSubheading G" id="G">G</p>
+                <button class="projectButton" id="GameProxy" onclick="location.href = 'gameproxy.html';">
+                    <img src="assets/logos/GameProxy.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">GameProxy</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <button class="projectButton" id="GenerationCheck" onclick="location.href = 'generationcheck.html';">
+                    <img src="../src/logo/logo.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">GenerationCheck</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <p class="projectLetterSubheading I" id="I">I</p>
+                <button class="projectButton" id="IP" onclick="location.href = 'ip.html';">
+                    <img src="assets/logos/IP.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">IP</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                </button>
+                <p class="projectLetterSubheading L" id="L">L</p>
+                <button class="projectButton" id="LargeTextDisplayer" onclick="location.href = 'largetextdisplayer.html';">
+                    <img src="assets/logos/LargeTextDisplayer.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Large Text Displayer</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <p class="projectLetterSubheading M" id="M">M</p>
+                <button class="projectButton" id="MacroClipSearch" onclick="location.href = 'macroclipsearch.html';">
+                    <img src="assets/logos/MacroClip.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">MacroClip Search</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <button class="projectButton" id="MandarinLearning" onclick="location.href = 'mandarinlearning.html';">
+                    <img src="assets/logos/MandarinLearning.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Mandarin Learning</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                </button>
+                <button class="projectButton" id="Matera" onclick="location.href = 'matera.html';">
+                    <img src="assets/logos/Matera.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Matera</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Android_robot.svg/872px-Android_robot.svg.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                </button>
+                <p class="projectLetterSubheading S" id="S">S</p>
+                <button class="projectButton" id="Subnodal" onclick="location.href = 'subnodal.html';">
+                    <img src="assets/logos/Subnodal.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Subnodal Website</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <p class="projectLetterSubheading T" id="T">T</p>
+                <button class="projectButton" id="TerminalBio" onclick="location.href = 'terminalbio.html';">
+                    <img src="../src/logo/logo.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Terminal Bio Website</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <button class="projectButton" id="ThisWebsite" onclick="location.href = 'thiswebsite.html';">
+                    <img src="../src/logo/logo.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">This Website</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <button class="projectButton" id="ThumbnailDownloader" onclick="location.href = 'thumbnaildownloader.html';">
+                    <img src="assets/logos/ThumbnailDownloader.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Thumbnail Downloader</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+                <p class="projectLetterSubheading W" id="W">W</p>
+                <button class="projectButton" id="Waterd" onclick="location.href = 'waterd.html';">
+                    <img src="assets/logos/Waterd.png" alt="Project Logo" class="projectButtonImage" id="projectButtonImage">
+                    <p class="projectListTitle">Waterd</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" class="projectInfoLogo1" id="projectInfoLogo1">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" class="projectInfoLogo2" id="projectInfoLogo2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="projectInfoLogo3" id="projectInfoLogo3">
+                </button>
+            </div>
+        </main>
+        <div class="navigationOverlay" id="navigationOverlay">
+            <button class="navigationExit" id="navigationExit" onclick="hideNavigation();">
+                <i class="material-icons navigationExitIcon">clear</i>
+            </button>
+            <div class="navigationOverlayItems">
+                <button class="pageOptionInfo info" onclick="about();">
+                    <i class="material-icons infoPage">info</i>
+                    <p class="buttonDescriptionInfo">About Me</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="projects();">
+                    <i class="material-icons infoPage">class</i>
+                    <p class="buttonDescriptionInfo">Projects</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="social();">
+                    <i class="material-icons infoPage">person</i>
+                    <p class="buttonDescriptionInfo">Social</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="blog();">
+                    <i class="material-icons infoPage">subject</i>
+                    <p class="buttonDescriptionInfo">Blog</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="contact();">
+                    <i class="material-icons infoPage">email</i>
+                    <p class="buttonDescriptionInfo">Contact</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="donate();">
+                    <i class="material-icons infoPage">favorite</i>
+                    <p class="buttonDescriptionInfo">Donate</p>
+                </button>
+            </div>
+        </div>
+        <div class="infoBox" id="infoBox">
+            <h3 class="infoText" id="infoText"></h3>
+        </div>
+    </body>
+</html>

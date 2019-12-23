@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mandarin Learning | Sebastian Doe</title>
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-navbutton-color" content="#000000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="projects.js"></script>
+        <script src="projectredirects.js"></script>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../pageredirects.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133492093-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-133492093-4');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    </head>
+    <body class="mainPage" onload="hideBackArrow(); hideForwardArrow(); consoleAlert();">
+        <script>document.body.classList.add('fade');</script>
+        <main>
+            <button class="navigationButton" id="navigationButton" onclick="showNavigation();">
+                <i class="material-icons navigationButtonIcon">menu</i>
+            </button>
+            <button class="backButtonProjects" id="navigationButton" onclick="location.href = 'index.html';">
+                <i class="material-icons backButtonIcon">ios_back_ios</i>
+            </button>
+            <img src="assets/logos/MandarinLearning.png" alt="Project Logo" class="projectLogo">
+            <br>
+            <h1>Mandarin Learning</h1>
+            <p>An Android app to help you learn Mandarin</p>
+            <br><br>
+            <div class="projectPageButtons">
+                <button class="projectPageButton" onclick="window.open('assets/apps/MandarinLearning.apk');">Download APK</button>
+            </div>
+            <div class="moreInfo">
+                <p class="projectInfoText">I coded this app which lets you enter a phrase in Mandarin, then recall the phrase later on, with the app telling you if you're correct or incorrect.</p>
+            </div>
+            <div class="graphicalInfo">
+                <p class="graphicalInfoDescription top"><i class="material-icons graphicalInfoIcon">people</i> Developed by me</p>
+                <p class="graphicalInfoDescription"><i class="material-icons graphicalInfoIcon">timer</i> Started in March 2015</p>
+                <p class="graphicalInfoDescription"><i class="material-icons graphicalInfoIcon">code</i> Coded in App Inventor, using Google Blocky.</p>
+                <p class="graphicalInfoDescription"><i class="material-icons graphicalInfoIcon">collections_bookmark</i> In the press: <a href="https://www.scmp.com/news/hong-kong/education-community/article/1770130/young-designers-show-their-smartphone-apps-hong" target="_blank" class="projectALink">South China Morning Post</a></p>
+            </div>
+        </main>
+        <div class="navigationOverlay" id="navigationOverlay">
+            <button class="navigationExit" id="navigationExit" onclick="hideNavigation();">
+                <i class="material-icons navigationExitIcon">clear</i>
+            </button>
+            <div class="navigationOverlayItems">
+                <button class="pageOptionInfo info" onclick="about();">
+                    <i class="material-icons infoPage">info</i>
+                    <p class="buttonDescriptionInfo">About Me</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="projects();">
+                    <i class="material-icons infoPage">class</i>
+                    <p class="buttonDescriptionInfo">Projects</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="social();">
+                    <i class="material-icons infoPage">person</i>
+                    <p class="buttonDescriptionInfo">Social</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="blog();">
+                    <i class="material-icons infoPage">subject</i>
+                    <p class="buttonDescriptionInfo">Blog</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="contact();">
+                    <i class="material-icons infoPage">email</i>
+                    <p class="buttonDescriptionInfo">Contact</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="donate();">
+                    <i class="material-icons infoPage">favorite</i>
+                    <p class="buttonDescriptionInfo">Donate</p>
+                </button>
+            </div>
+        </div>
+        <div class="infoBox" id="infoBox">
+            <h3 class="infoText" id="infoText"></h3>
+        </div>
+    </body>
+</html>
