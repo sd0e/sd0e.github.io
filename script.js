@@ -185,19 +185,19 @@ document.addEventListener('keydown', function(e) {
   }
   if (inFocus != true) {
     if (e.which == 68) {
-      window.location.href = "/donate.html";  
+      window.location.href = "/donate";  
     } else if (e.which == 65) {
-      window.location.href = "/about.html";
+      window.location.href = "/about";
     } else if (e.which == 80) {
-      window.location.href = "/projects/index.html";
+      window.location.href = "/projects";
     } else if (e.which == 72) {
-      window.location.href = "/index.html";
+      window.location.href = "/";
     } else if (e.which == 67) {
-      window.location.href = "/contact.html";
+      window.location.href = "/contact";
     } else if (e.which == 83) {
-      window.location.href = "/social.html";
+      window.location.href = "/social";
     } else if (e.which == 66) {
-      window.location.href = "/blog.html";
+      window.location.href = "/blog";
     } else if (e.which == 32) {
       if (navigationOverlayDisplay == "block") {
         hideNavigation();

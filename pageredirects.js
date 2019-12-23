@@ -1,23 +1,23 @@
 function about() {
-    window.location.href = "/about.html";
+    window.location.href = "/about";
 }
 
 function projects() {
-    window.location.href = "/projects/index.html";
+    window.location.href = "/projects";
 }
 
 function social() {
-    window.location.href = "/social.html";
+    window.location.href = "/social";
 }
 
 function blog() {
-    window.location.href = "/blog.html";
+    window.location.href = "/blog";
 }
 
 function contact() {
-    window.location.href = "/contact.html";
+    window.location.href = "/contact";
 }
 
 function donate() {
-    window.location.href = "/donate.html";
+    window.location.href = "/donate";
 }
