@@ -30,12 +30,12 @@
         <meta name="msapplication-TileColor" content="#000000">
         <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     </head>
-    <body class="mainPage" onload="hideBackArrow(); hideForwardArrow(); consoleAlert();">
+    <body class="mainPage" onload="homeLoad();" id="home">
         <script>document.body.classList.add('fade');</script>
         <main>
-            <img src="src/logo/logo.png" class="homeLogo">
-            <h1>Sebastian Doe</h1>
-            <p>Welcome to my personal website!</p>
+            <img src="src/logo/logo.png" class="homeLogo" id="homeImage">
+            <h1 id="homeTitle">Sebastian Doe</h1>
+            <p id="homeSubtitle">Welcome to my personal website!</p>
             <br><br>
             <h4>Which page would you like to go to?</h4>
             <br>
