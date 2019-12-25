@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>IP | Sebastian Doe</title>
+        <title>Sebastian Doe</title>
         <meta name="theme-color" content="#000000">
         <meta name="msapplication-navbutton-color" content="#000000">
         <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../script.js"></script>
-        <script src="projects.js"></script>
-        <script src="projectredirects.js"></script>
         <link rel="stylesheet" href="../style.css">
         <script src="../pageredirects.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
@@ -38,25 +36,32 @@
             <button class="navigationButton" id="navigationButton" onclick="showNavigation();">
                 <i class="material-icons navigationButtonIcon">menu</i>
             </button>
-            <button class="backButtonProjects" id="navigationButton" onclick="location.href = 'index.html';">
-                <i class="material-icons backButtonIcon">ios_back_ios</i>
-            </button>
-            <img src="assets/logos/IP.png" alt="Project Logo" class="projectLogo IP">
+            <h1>Make a Micro SD Card bootable again from a partitioned drive</h1>
             <br>
-            <h1>IP</h1>
-            <p>Easily check your IP address and copy it with one tap</p>
+            <div class="articleInfo">
+                <p><i class="material-icons articleIcons">person</i> Sebastian Doe</p>
+                <p><i class="material-icons articleIcons">timer</i> 25 December 2019</p>
+            </div>
             <br><br>
-            <div class="projectPageButtons">
-                <button class="projectPageButton leftButton" onclick="window.open('https://play.google.com/store/apps/details?id=appinventor.ai_sebastiandoe5.IP');">View on the Play Store</button>
-                <button class="projectPageButton" onclick="window.open('assets/apps/IP.apk');">Download APK</button>
-            </div>
-            <div class="moreInfo">
-                <p class="projectInfoText">I was struggling to find an app which let you just view your IP address and not display annoying ads, so I developed IP in a day. It has a refresh and Copy to Clipboard button to make it easier to use with other apps.</p>
-            </div>
-            <div class="graphicalInfo">
-                <p class="graphicalInfoDescription top"><i class="material-icons graphicalInfoIcon">people</i> Developed by me</p>
-                <p class="graphicalInfoDescription"><i class="material-icons graphicalInfoIcon">timer</i> Started in August 2017</p>
-                <p class="graphicalInfoDescription"><i class="material-icons graphicalInfoIcon">code</i> Coded in Thunkable, using Google Blocky.</p>
+            <div class="articleContents">
+                <p>This method allows you to make an SD card bootable again by just typing out 10 lines of code in CMD (in Windows).</p>
+                <p class="articleAlert">This completely wipes the data off the SD card so be careful when completing the steps.</p>
+                <div class="codeDiv">
+                    <code id="codeText">
+                        diskpart<br>
+                        list disk<br>
+                        select disk {number of the disk you want to format from the above line}<br>
+                        clean<br>
+                        create partition primary<br>
+                        select partition 1<br>
+                        active<br>
+                        format fs=fat32 quick<br>
+                        assign<br>
+                        exit<br>
+                    </code>
+                </div><br>
+                <p>That's it! Your SD card should be good as new.</p>
+                <p>If you're confused about anything here, <a class="articleLink" href="../contact">contact me</a> and I'll try to get back to you as quickly as I can.</p>
             </div>
         </main>
         <div class="navigationOverlay" id="navigationOverlay">
