@@ -155,6 +155,23 @@ function createAlert(text) {
   showAlert();
 }
 
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+});
+
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+      .then(function(registration) {
+            console.log('Service Worker Registered');
+      });
+    navigator.serviceWorker.ready.then(function(registration) {
+       console.log('Service Worker Ready');
+    });
+}
+
 function checkFocus() {
   if ($(document.activeElement).attr("type") == "text" || $(document.activeElement).attr("type") == "textarea") {
     var inFocus = true;
@@ -172,7 +189,7 @@ document.addEventListener('keydown', function(e) {
     } else if (e.which == 65) {
       window.location.href = "/about";
     } else if (e.which == 80) {
-      window.location.href = "/projects";
+      window.location.href = "/projects/";
     } else if (e.which == 72) {
       window.location.href = "/";
     } else if (e.which == 67) {
@@ -190,34 +207,3 @@ document.addEventListener('keydown', function(e) {
     }
   }
 });
-
-function homeLoad() {
-  var date = new Date().getDate();
-  var oldMonth = new Date().getMonth();
-  var month = oldMonth + 1;
-
-  // Christmas (December 25)
-  if (date == 25 && month == 12) {
-    document.getElementById("homeTitle").innerHTML = "Happy Christmas!";
-    document.getElementById("homeSubtitle").innerHTML = "Have a great day, site user!";
-    document.getElementById("homeImage").src = "src/transparent.png";
-    document.getElementById("home").style.backgroundImage = "url('src/snow.jpg')";
-  }
-}
-
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-});
-
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-      .then(function(registration) {
-            console.log('Service Worker Registered');
-      });
-    navigator.serviceWorker.ready.then(function(registration) {
-       console.log('Service Worker Ready');
-    });
-}
