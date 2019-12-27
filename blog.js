@@ -2,12 +2,17 @@ function liveUpdate() {
     nonLowercaseInput = document.getElementById("projectSearch").value;
     input = nonLowercaseInput.toLowerCase();
 
-    // Website Favicons
-    var str = "how to easily generate favicons for your website";
+    var str = "make a micro sd card bootable again";
     if (str.includes(input)) {
-        document.getElementById("article1").style.visibility="visible";
+        document.getElementById("article1").style.display="inline";
     } else {
-        document.getElementById("article1").style.visibility="hidden";
+        document.getElementById("article1").style.display="none";
     };
 
+    var str = "ranking reddit apps for android";
+    if (str.includes(input)) {
+        document.getElementById("article2").style.display="inline";
+    } else {
+        document.getElementById("article2").style.display="none";
+    };
 };

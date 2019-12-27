@@ -737,3 +737,85 @@ code {
     font-weight: bold;
     color: red;
 }
+
+.articleBold {
+    font-weight: bold;
+}
+
+.articleItalics {
+    font-style: italic;
+}
+
+.questionOuterContainer {
+    background: #0f0f0f;
+    height: 60vh;
+    border-radius: 1vh;
+    margin-top: 10vh;
+    width: 70vw;
+    margin-left: 15vw;
+}
+
+.questionContainer {
+    height: 50vh;
+    margin-top: 5vh;
+    width: 65vw;
+    margin-left: 2.5vw;
+    text-align: center;
+}
+
+.questionTitle {
+    padding-top: 3vh;
+}
+
+.questionButton {
+    height: 6vh;
+    width: 10vw;
+    min-width: 30vh;
+    border-radius: 1000vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 3vh;
+    margin-top: 6vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.questionInput {
+    outline-width: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    background-color: #353535;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    height: 3vh;
+    width: 30vw;
+    font-size: 1.5vh;
+}
+
+.questionChoice {
+    height: 6vh;
+    min-width: 7vh;
+    border-radius: 1vh;
+    border: 0;
+    background-color: #353535;
+    color: white;
+    text-align: center;
+    position: relative;
+    font-size: 2vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: 1;
+    margin-right: 1;
+    padding-top: 0.5vh
+}
+
+.clickedButton {
+    background-color: #5e5e5e;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Thumbnail Downloader | Guide | Sebastian Doe</title>
+        <meta name="theme-color" content="#000000">
+        <meta name="msapplication-navbutton-color" content="#000000">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../script.js"></script>
+        <script src="thumbnail.js"></script>
+        <link rel="stylesheet" href="../style.css">
+        <script src="../pageredirects.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133492093-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            
+            gtag('config', 'UA-133492093-4');
+        </script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+        <meta name="msapplication-TileColor" content="#000000">
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    </head>
+    <body class="mainPage" onload="guideStart();">
+        <script>document.body.classList.add('fade');</script>
+        <main>
+            <h1>Thumbnail Downloader Guide</h1>
+            <p>Follow the below steps to get the exact YouTube thumbnail you want.</p>
+            <div class="questionOuterContainer">
+                <div class="questionContainer" id="questionContainerText" style="display: none;">
+                    <h2 class="questionTitle" id="questionTitleText"></h2>
+                    <br>
+                    <input type="text" id="questionInput" class="questionInput" placeholder=""><br>
+                    <button class="questionButton" id="questionButtonText" onclick="nextQuestion();"></button>
+                </div>
+                <div class="questionContainer" id="questionContainerChoice" style="display: none;">
+                    <h2 class="questionTitle" id="questionTitleChoice">f</h2>
+                    <br>
+                    <button class="questionChoice b1" id="questionChoice1" onclick="buttonChoice('one');">Choice 1</button>
+                    <button class="questionChoice b2" id="questionChoice2" onclick="buttonChoice('two');">Choice 2</button>
+                    <button class="questionChoice b3" id="questionChoice3" onclick="buttonChoice('three');">Choice 3</button>
+                    <button class="questionChoice b4" id="questionChoice4" onclick="buttonChoice('four');">Choice 4</button>
+                    <button class="questionChoice b5" id="questionChoice5" onclick="buttonChoice('five');">Choice 5</button>
+                    <button class="questionChoice b6" id="questionChoice6" onclick="buttonChoice('six');">Choice 6</button>
+                    <br>
+                    <button class="questionButton" id="questionButtonChoice" onclick="nextQuestion();"></button>
+                </div>
+            </div>
+        </main>
+        <div class="navigationOverlay" id="navigationOverlay">
+            <button class="navigationExit" id="navigationExit" onclick="hideNavigation();">
+                <i class="material-icons navigationExitIcon">clear</i>
+            </button>
+            <div class="navigationOverlayItems">
+                <button class="pageOptionInfo info" onclick="about();">
+                    <i class="material-icons infoPage">info</i>
+                    <p class="buttonDescriptionInfo">About Me</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="projects();">
+                    <i class="material-icons infoPage">class</i>
+                    <p class="buttonDescriptionInfo">Projects</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="social();">
+                    <i class="material-icons infoPage">person</i>
+                    <p class="buttonDescriptionInfo">Social</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="blog();">
+                    <i class="material-icons infoPage">subject</i>
+                    <p class="buttonDescriptionInfo">Blog</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="contact();">
+                    <i class="material-icons infoPage">email</i>
+                    <p class="buttonDescriptionInfo">Contact</p>
+                </button>
+                <button class="pageOptionInfo info" onclick="donate();">
+                    <i class="material-icons infoPage">favorite</i>
+                    <p class="buttonDescriptionInfo">Donate</p>
+                </button>
+            </div>
+        </div>
+        <div class="infoBox" id="infoBox">
+            <h3 class="infoText" id="infoText"></h3>
+        </div>
+    </body>
+</html>
