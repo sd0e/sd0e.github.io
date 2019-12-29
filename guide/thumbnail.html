@@ -44,7 +44,7 @@
                     <button class="questionButton" id="questionButtonText" onclick="nextQuestion();"></button>
                 </div>
                 <div class="questionContainer" id="questionContainerChoice" style="display: none;">
-                    <h2 class="questionTitle" id="questionTitleChoice">f</h2>
+                    <h2 class="questionTitle" id="questionTitleChoice"></h2>
                     <br>
                     <button class="questionChoice b1" id="questionChoice1" onclick="buttonChoice('one');">Choice 1</button>
                     <button class="questionChoice b2" id="questionChoice2" onclick="buttonChoice('two');">Choice 2</button>
@@ -54,6 +54,19 @@
                     <button class="questionChoice b6" id="questionChoice6" onclick="buttonChoice('six');">Choice 6</button>
                     <br>
                     <button class="questionButton" id="questionButtonChoice" onclick="nextQuestion();"></button>
+                </div>
+                <div class="questionContainer" id="questionContainerResults" style="display: none;">
+                    <h2 class="questionTitle" id="questionTitleResults"></h2>
+                    <p id="questionDescriptionResults"></p>
+                    <br>
+                    <button class="questionChoice b1" id="questionResults1" onclick="buttonChoice('one');">Choice 1</button>
+                    <button class="questionChoice b2" id="questionResults2" onclick="buttonChoice('two');">Choice 2</button>
+                    <button class="questionChoice b3" id="questionResults3" onclick="buttonChoice('three');">Choice 3</button>
+                    <button class="questionChoice b4" id="questionResults4" onclick="buttonChoice('four');">Choice 4</button>
+                    <button class="questionChoice b5" id="questionResults5" onclick="buttonChoice('five');">Choice 5</button>
+                    <button class="questionChoice b6" id="questionResults6" onclick="buttonChoice('six');">Choice 6</button>
+                    <br>
+                    <button class="questionButton" id="questionButtonResults" onclick="nextQuestion();"></button>
                 </div>
             </div>
         </main>

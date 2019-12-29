@@ -8,7 +8,6 @@ body {
     padding: 0;
     width: 100%;
     height: 100%;
-    -moz-user-select: none; -webkit-user-select: none; -ms-user-select:none; user-select:none;-o-user-select:none;
     z-index: 1;
 }
 
@@ -161,6 +160,7 @@ button:hover {
     -webkit-transition:.3s;
     transition:.3s;
     background-color: #5e5e5e;
+    cursor: pointer;
 }
 
 body::-webkit-scrollbar {
@@ -402,26 +402,7 @@ h4 {
     text-align: left;
     padding-left: 2vw;
     padding-right: 2vw;
-}
-
-.q1 {
-    animation: fadeIn 1s linear;
-}
-
-.q2 {
     animation: fadeIn 2s linear;
-}
-
-.q3 {
-    animation: fadeIn 3s linear;
-}
-
-.q4 {
-    animation: fadeIn 4s linear;
-}
-
-.q5 {
-    animation: fadeIn 5s linear;
 }
 
 a {

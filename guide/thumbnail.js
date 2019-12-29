@@ -1,3 +1,8 @@
+let sixteenByNineChoice;
+let fourByThreeChoice;
+let aspectRatioChoice;
+let videoSnapshotChoice;
+
 function showQuestionContainer(id) {
     if (id == "choice") {
         $("#questionContainerChoice").attr("style", " ");
@@ -5,6 +10,9 @@ function showQuestionContainer(id) {
     } else if (id == "text") {
         $("#questionContainerText").attr("style", " ");
         $("#questionContainerText").fadeIn();
+    } else if (id == "results") {
+        $("#questionContainerResults").attr("style", " ");
+        $("#questionContainerResults").fadeIn();
     }
 }
 
@@ -13,6 +21,8 @@ function hideQuestionContainer(id) {
         $("#questionContainerChoice").fadeOut();
     } else if (id == "text") {
         $("#questionContainerText").fadeOut();
+    } else if (id == "results") {
+        $("#questionContainerResults").fadeOut();
     }
 }
 
@@ -61,9 +71,48 @@ function intQuestionContainerChoice(title, one, two, three, four, five, six, but
     showQuestionContainer("choice");
 }
 
+function intResults(title, description, one, two, three, four, five, six, buttonText) {
+    $("#questionTitleResults").html(title);
+    $("#questionDescriptionResults").html(description);
+    if (one == "") {
+        $("#questionResults1").hide();
+    } else {
+        $("#questionResults1").html(one);
+    }
+    if (two == "") {
+        $("#questionResults2").hide();
+    } else {
+        $("#questionResults2").html(two);
+    }
+    if (three == "") {
+        $("#questionResults3").hide();
+    } else {
+        $("#questionResults3").html(three);
+    }
+    if (four== "") {
+        $("#questionResults4").hide();
+    } else {
+        $("#questionResults4").html(four);
+    }
+    if (five == "") {
+        $("#questionResults5").hide();
+    } else {
+        $("#questionResults5").html(five);
+    }
+    if (six == "") {
+        $("#questionResults6").hide();
+    } else {
+        $("#questionResults6").html(six);
+    }
+    $("#questionButtonResults").html(buttonText);
+    showQuestionContainer("results");
+    generateResults();
+}
+
 function guideStart() {
     $("#questionContainerChoice").hide();
     $("#questionContainerText").hide();
+    $("#questionContainerResults").hide();
     question1();
 }
 
@@ -77,10 +126,21 @@ function removeAllChoiceClasses() {
 }
 
 function buttonChoice(number) {
-    numberChoice = number;
+    if ($(".format").is(":visible")) {
+        aspectRatioChoice = number;   
+    } else if ($(".threea").is(":visible")) {
+        sixteenByNineChoice = number;   
+    } else if ($(".threeb").is(":visible")) {
+        fourByThreeChoice = number;   
+    } else if ($(".threec").is(":visible")) {
+        videoSnapshotChoice = number;   
+    }
     removeAllChoiceClasses();
     if (number == 'one') {
         $("#questionChoice1").addClass("clickedButton");
+        if ($("#questionContainerResults").is(":visible")) {
+             
+        }
     } else if (number == 'two') {
         $("#questionChoice2").addClass("clickedButton");
     } else if (number == 'three') {
@@ -106,13 +166,31 @@ function nextQuestion() {
         $(".format").removeClass("format");
         hideQuestionContainer("choice");
         setTimeout(function(){
-            if (numberChoice = 'one') {
+            if (aspectRatioChoice == 'one') {
                 question3a();
-            } else if (numberChoice = 'two') {
+            } else if (aspectRatioChoice == 'two') {
                 question3b();
-            } else if (numberChoice = 'three') {
+            } else if (aspectRatioChoice == 'three') {
                 question3c();
             }
+        }, 500);
+    } else if ($(".threea").is(":visible")) {
+        $(".threea").removeClass("threea");
+        hideQuestionContainer("choice");
+        setTimeout(function(){
+            results();
+        }, 500);
+    } else if ($(".threeb").is(":visible")) {
+        $(".threeb").removeClass("threeb");
+        hideQuestionContainer("choice");
+        setTimeout(function(){
+            results();
+        }, 500);
+    } else if ($(".threec").is(":visible")) {
+        $(".threec").removeClass("threec");
+        hideQuestionContainer("choice");
+        setTimeout(function(){
+            results();
         }, 500);
     }
 }
@@ -127,8 +205,56 @@ function question2() {
 
 function question3a() {
     intQuestionContainerChoice("Which 16:9 Resolution Do You Want?", "720p", "180p", "", "", "", "", "Next", "threea");
+    threeaChosen = true;
 }
 
 function question3b() {
     intQuestionContainerChoice("Which 4:3 Resolution Do You Want?", "480p", "360p", "90p", "", "", "", "Next", "threeb");
+    threebChosen = true;
+}
+
+function question3c() {
+    intQuestionContainerChoice("Which video snapshot do you want?", "1", "2", "3", "", "", "", "Next", "threec");
+    threecChosen = true;
+}
+
+function results() {
+    generateResults();
+    intResults("Your thumbnail is ready!", "Click one of the buttons below to download your thumbnail", "Download", "Open Image", "Copy Image URL", "", "", "", "Restart");
+}
+
+function getID(url) {
+    var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
+    var match = url.match(regExp);
+    return (match&&match[7].length==11)? match[7] : false;
+}
+
+function generateResults() {
+    base1 = 'https://img.youtube.com/vi/';
+    videoID = getID(videourl);
+    base2 = base1 + videoID + '/';
+    if (aspectRatioChoice == 'one') {
+        if (sixteenByNineChoice == 'one') {
+            base3 = base2 + 'maxresdefault';
+        } else if (sixteenByNineChoice == 'two') {
+            base3 = base2 + 'mqdefault';
+        }
+    } else if (aspectRatioChoice == 'two') {
+        if (fourByThreeChoice == 'one') {
+            base3 = base2 + 'sddefault';
+        } else if (fourByThreeChoice == 'two') {
+            base3 = base2 + 'hqdefault';
+        } else if (fourByThreeChoice == 'three') {
+            base3 = base2 + 'default';
+        }
+    } else if (aspectRatioChoice == 'three') {
+        if (videoSnapshotChoice == 'one') {
+            base3 = base2 + '1';
+        } else if (videoSnapshotChoice == 'two') {
+            base3 = base2 + '2';
+        } else if (videoSnapshotChoice == 'three') {
+            base3 = base2 + '3';
+        }
+    }
+    fullThumbnailURL = base3 + '.jpg';
 }
