@@ -272,6 +272,16 @@ h4 {
     padding-top: 45vh;
 }
 
+.btn:focus,
+.btn__content:focus {
+    outline: none;
+}
+
+.btn:focus > .btn__content  {
+    box-shadow: 0 0 2px 2px #5e5e5e;
+    background-color: #5e5e5e;
+} 
+
 .navigationExit {
     background-color: #1b1b1b;
     height: 5vh;
