@@ -11,7 +11,7 @@ function social() {
 }
 
 function blog() {
-    window.location.href = "/blog";
+    window.open("https://sebdoe.com/");
 }
 
 function contact() {
