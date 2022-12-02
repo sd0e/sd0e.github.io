@@ -7,11 +7,11 @@ function sInstagram() {
 }
 
 function sGitHub() {
-    window.open("https://github.com/sebastiandoe5");
+    window.open("https://github.com/sd0e");
 }
 
 function sGitLab() {
-    window.open("https://gitlab.com/sebastiandoe5");
+    window.open("https://gitlab.com/sd0e");
 }
 
 function sDevto() {
@@ -19,9 +19,9 @@ function sDevto() {
 }
 
 function sTwitter() {
-    window.open("https://twitter.com/sebastiandoe5");
+    window.open("https://twitter.com/sbd0e");
 }
 
 function sYouTube() {
-    window.open("https://www.youtube.com/channel/UC1nJuc_4dq-yypAKaZo5-Wg");
+    window.open("https://www.youtube.com/@sebdoe");
 }
